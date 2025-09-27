@@ -532,8 +532,9 @@ export default function HomePage() {
                     İş Axtaran Elan Formu
                   </h3>
 
-                  <div className="input-group">
-                    <label className="input-label block text-sm font-medium mb-1">
+                  <div className="flex items-end space-x-4">
+                    <div className="flex-1">
+                      <label className="input-label block text-sm font-medium mb-1">
                       1.Əlaqə Nömrən <span className="text-red-500">*</span>
                     </label>
                     <div className="flex items-center">
@@ -551,6 +552,32 @@ export default function HomePage() {
                       />
                     </div>
                   </div>
+                  <div className="flex items-center h-12">
+                    <input
+                      type="checkbox"
+                      id="hide-phone-js"
+                      onChange={(e) => {
+                        const phoneInput = document.querySelector('input[name="contactNumber"]') as HTMLInputElement
+                        if (e.target.checked) {
+                          phoneInput.value = "Paylaşmaq istəmirəm"
+                          phoneInput.disabled = true
+                          phoneInput.required = false
+                        } else {
+                          phoneInput.value = ""
+                          phoneInput.disabled = false
+                          phoneInput.required = true
+                        }
+                      }}
+                      className="h-4 w-4 text-emerald-500 border-gray-600 rounded focus:ring-emerald-500 bg-gray-800"
+                    />
+                    <label
+                      htmlFor="hide-phone-js"
+                      className="ml-2 block text-sm font-medium text-gray-300 whitespace-nowrap"
+                    >
+                      Nömrəmi paylaşmaq istəmirəm
+                    </label>
+                  </div>
+                </div>
 
                   <div className="flex items-end space-x-4">
                     <div className="flex-1">
