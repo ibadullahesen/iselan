@@ -421,15 +421,6 @@ export default function HomePage() {
               <p>Cari İstifadəçi ID-si:</p>
               <span className="font-mono text-gray-400 break-all">{user?.uid || "Yüklənir..."}</span>
             </div>
-
-            <button
-              onClick={() => window.open('https://github.com/ibadullahesen/app/releases/download/v1.0/AxtarGet.4.apk', '_blank')}
-              className="flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-lg shadow-blue-600/50 ml-2 sm:ml-4"
-            >
-              <i className="fa-solid fa-download mr-2"></i>
-              Proqramımızı Yüklə
-            </button>
-            
             <button
               onClick={() => setIsPostModalOpen(true)}
               className="flex items-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-lg shadow-emerald-600/50"
